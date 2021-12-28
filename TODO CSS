@@ -1,0 +1,15 @@
+.main button{
+    background-color: black;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+display: inline;
+    height: 40px;
+    margin-top: 10px;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
