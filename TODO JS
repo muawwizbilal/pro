@@ -1,0 +1,58 @@
+var ol = document.getElementById("li")
+function add(){
+    var add1 = document.getElementById("inpt")
+    // console.log(add1.value)
+    
+    
+if(inpt.value.length > 3){
+    
+    var li = document.createElement("li")
+    var txt = document.createTextNode(inpt.value)
+    li.appendChild(txt)
+    // console.log(li)
+    
+    
+    var dlt = document.createElement("button")
+    var txt1 = document.createTextNode("Delete")
+    dlt.appendChild(txt1)
+     dlt.setAttribute("onclick","dlist(this)")
+    
+    
+    var dlt1 = document.createElement("button")
+    var txt2 = document.createTextNode("Edit")
+    dlt1.appendChild(txt2)
+    dlt1.setAttribute("onclick","dlist1(this)")
+    
+    
+    
+    li.appendChild(dlt1)
+    li.appendChild(dlt)
+    ol.appendChild(li)
+    inpt.value= ""
+
+}
+    else{
+        alert("write something more than 3 words")
+    }
+    }
+
+function Delete(){
+ol.innerHTML =" "
+}
+
+function dlist(e){
+    e.parentNode.remove()
+}
+
+function dlist1(e){
+var pro = prompt("enter edit value" ,e.parentNode.firstChild.nodeValue)
+
+if(pro.length <=3 ){
+     alert("invalid")
+     
+    
+}
+else{
+    e.parentNode.firstChild.nodeValue=pro
+}
+}
